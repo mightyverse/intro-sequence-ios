@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IntroSequence/LocalMovieViewController.m"
-            timestampString = "455289406.964385"
+            timestampString = "455291211.868602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IntroSequence/LocalMovieViewController.m"
-            timestampString = "455289312.323867"
+            timestampString = "455291211.868602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-createAndConfigurePlayerWithURL:sourceType:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IntroSequence/LocalMovieViewController.m"
-            timestampString = "455289312.323867"
+            timestampString = "455291211.868602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-createAndConfigurePlayerWithURL:sourceType:"
             landmarkType = "5">
          </BreakpointContent>

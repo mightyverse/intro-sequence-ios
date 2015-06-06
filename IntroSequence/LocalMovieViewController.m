@@ -43,6 +43,35 @@ CGFloat kMovieViewOffsetY = 0.0;
     return theMovieURL;
 }
 
+/*  Notification called when the movie finished playing. */
+- (void) moviePlayBackDidFinish:(NSNotification*)notification
+{
+    NSNumber *reason = [notification userInfo][MPMoviePlayerPlaybackDidFinishReasonUserInfoKey];
+    switch ([reason integerValue])
+    {
+            /* The end of the movie was reached. */
+        case MPMovieFinishReasonPlaybackEnded:
+            NSLog(@"Playback ended");
+            break;
+            
+            /* An error was encountered during playback. */
+        case MPMovieFinishReasonPlaybackError:
+            NSLog(@"An error was encountered during playback");
+            break;
+            
+            /* The user stopped playback. */
+        case MPMovieFinishReasonUserExited:
+            NSLog(@"User stopped playback -- don't think this can happen");
+
+        default:
+            break;
+    }
+    
+    [self performSegueWithIdentifier: @"Next" sender: self];
+}
+
+
+
 /*
  Create a MPMoviePlayerController movie object for the specified URL and add movie notification
  observers. Configure the movie object for the source type, scaling mode, control style, background
@@ -93,6 +122,12 @@ CGFloat kMovieViewOffsetY = 0.0;
          in a movie player’s view property into your application’s view hierarchy.
          Be sure to size the frame correctly. */
         [self.view addSubview: [player view]];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(moviePlayBackDidFinish:)
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification
+                                                   object:player];
+
     }
 }
 
@@ -118,7 +153,6 @@ CGFloat kMovieViewOffsetY = 0.0;
     NSLog(@"viewDidLoad LocalMovieViewController");
     NSURL *movieUrl = [self localMovieURL];
     [self playMovieFile:movieUrl];
-
 }
 
 
