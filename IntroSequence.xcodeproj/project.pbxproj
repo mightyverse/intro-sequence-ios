@@ -16,6 +16,7 @@
 		269978281B228CDF00D3A11E /* EndIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269978271B228CDF00D3A11E /* EndIntroViewController.m */; };
 		2699782B1B2313E300D3A11E /* LocalMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699782A1B2313E300D3A11E /* LocalMovieViewController.m */; };
 		2699782E1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */; };
+		269978321B231CB200D3A11E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269978311B231CB200D3A11E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		269978291B2313E300D3A11E /* LocalMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMovieViewController.h; sourceTree = "<group>"; };
 		2699782A1B2313E300D3A11E /* LocalMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMovieViewController.m; sourceTree = "<group>"; };
 		2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; path = "Movies/judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; sourceTree = SOURCE_ROOT; };
+		269978311B231CB200D3A11E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269978321B231CB200D3A11E /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +71,7 @@
 		269977F41B2286B300D3A11E = {
 			isa = PBXGroup;
 			children = (
+				269978301B231C4100D3A11E /* Frameworks */,
 				269977FF1B2286B400D3A11E /* IntroSequence */,
 				269978191B2286B400D3A11E /* IntroSequenceTests */,
 				269977FE1B2286B400D3A11E /* Products */,
@@ -133,6 +137,14 @@
 				2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */,
 			);
 			name = Movies;
+			sourceTree = "<group>";
+		};
+		269978301B231C4100D3A11E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				269978311B231CB200D3A11E /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -174,12 +174,21 @@
                                 <color key="backgroundColor" red="0.19304764620000001" green="0.40428740029999999" blue="0.096317772369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqZ-n0-1TB">
-                                <rect key="frame" x="128" y="319" width="119" height="30"/>
+                                <rect key="frame" x="128" y="390" width="119" height="30"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="OKW-Ma-qYh" kind="show" id="BTO-Db-YoT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-Zw-88u">
+                                <rect key="frame" x="156" y="319" width="75" height="30"/>
+                                <state key="normal" title="Play Movie">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapPlayMovie:" destination="s0d-al-Di4" eventType="touchUpInside" id="Tjp-Ma-ttn"/>
                                 </connections>
                             </button>
                         </subviews>
