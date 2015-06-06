@@ -18,6 +18,8 @@
 		2699782E1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */; };
 		269978321B231CB200D3A11E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269978311B231CB200D3A11E /* MediaPlayer.framework */; };
 		269978341B23438800D3A11E /* judy-welcome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 269978331B23438800D3A11E /* judy-welcome.mp4 */; };
+		269978361B234B3500D3A11E /* john-native-language.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 269978351B2343A300D3A11E /* john-native-language.mp4 */; };
+		269978391B234D7500D3A11E /* IntroSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 269978381B234D7500D3A11E /* IntroSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,9 @@
 		2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; path = "Movies/judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; sourceTree = SOURCE_ROOT; };
 		269978311B231CB200D3A11E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		269978331B23438800D3A11E /* judy-welcome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "judy-welcome.mp4"; path = "Movies/judy-welcome.mp4"; sourceTree = SOURCE_ROOT; };
-		269978351B2343A300D3A11E /* john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4"; path = "Movies/john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4"; sourceTree = SOURCE_ROOT; };
+		269978351B2343A300D3A11E /* john-native-language.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "john-native-language.mp4"; path = "Movies/john-native-language.mp4"; sourceTree = SOURCE_ROOT; };
+		269978371B234D7500D3A11E /* IntroSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroSegue.h; sourceTree = "<group>"; };
+		269978381B234D7500D3A11E /* IntroSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				269978041B2286B400D3A11E /* AppDelegate.h */,
 				269978051B2286B400D3A11E /* AppDelegate.m */,
 				2699780A1B2286B400D3A11E /* Main.storyboard */,
+				269978371B234D7500D3A11E /* IntroSegue.h */,
+				269978381B234D7500D3A11E /* IntroSegue.m */,
 				269978291B2313E300D3A11E /* LocalMovieViewController.h */,
 				2699782A1B2313E300D3A11E /* LocalMovieViewController.m */,
 				269978261B228CDF00D3A11E /* EndIntroViewController.h */,
@@ -137,7 +143,7 @@
 		2699782C1B23177B00D3A11E /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				269978351B2343A300D3A11E /* john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4 */,
+				269978351B2343A300D3A11E /* john-native-language.mp4 */,
 				269978331B23438800D3A11E /* judy-welcome.mp4 */,
 				2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */,
 			);
@@ -232,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269978361B234B3500D3A11E /* john-native-language.mp4 in Resources */,
 				2699782E1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 in Resources */,
 				2699780C1B2286B400D3A11E /* Main.storyboard in Resources */,
 				269978111B2286B400D3A11E /* LaunchScreen.xib in Resources */,
@@ -255,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				269978281B228CDF00D3A11E /* EndIntroViewController.m in Sources */,
+				269978391B234D7500D3A11E /* IntroSegue.m in Sources */,
 				269978061B2286B400D3A11E /* AppDelegate.m in Sources */,
 				269978031B2286B400D3A11E /* main.m in Sources */,
 				2699782B1B2313E300D3A11E /* LocalMovieViewController.m in Sources */,

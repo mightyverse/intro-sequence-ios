@@ -82,12 +82,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ch-gt-4lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454.5" y="1068.5"/>
+            <point key="canvasLocation" x="1322.5" y="2044.5"/>
         </scene>
-        <!--Welcome Controller-->
+        <!--Welcome Movie-->
         <scene sceneID="6S8-bi-8WJ">
             <objects>
-                <viewController id="XiH-nl-MDM" userLabel="Welcome Controller" sceneMemberID="viewController">
+                <viewController id="XiH-nl-MDM" userLabel="Welcome Movie" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V8J-3D-snj"/>
                         <viewControllerLayoutGuide type="bottom" id="XEB-Fg-KBK"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="654.5" y="1102.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In-->
         <scene sceneID="D8S-En-3b8">
             <objects>
-                <viewController id="2d9-qo-oiX" sceneMemberID="viewController">
+                <viewController id="2d9-qo-oiX" userLabel="Sign In" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HIL-3m-5OU"/>
                         <viewControllerLayoutGuide type="bottom" id="3JI-yT-iWP"/>
@@ -143,8 +143,15 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-Ge-DIL">
+                                <rect key="frame" x="143" y="151" width="89" height="30"/>
+                                <color key="backgroundColor" red="0.68662295230000003" green="0.62404714520000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="s0d-al-Di4" kind="show" id="0fz-DJ-sKl"/>
+                                    <segue destination="BnU-4J-DEH" kind="show" id="ayb-bi-WjF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="654.5" y="1102.5"/>
         </scene>
-        <!--LocalMovie Controller-->
+        <!--Native Language-->
         <scene sceneID="XNf-Nj-7KQ">
             <objects>
-                <viewController id="s0d-al-Di4" userLabel="LocalMovie Controller" customClass="LocalMovieViewController" sceneMemberID="viewController">
+                <viewController id="s0d-al-Di4" userLabel="Native Language" customClass="LocalMovieViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQI-q8-m98"/>
                         <viewControllerLayoutGuide type="bottom" id="zNn-nm-rHd"/>
@@ -172,7 +179,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-jm-wxw" userLabel="Movie Playback Area">
                                 <rect key="frame" x="0.0" y="64" width="376" height="376"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="judy-welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-V1-lVU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="john-native-language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-V1-lVU">
                                         <rect key="frame" x="8" y="36" width="360" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,12 +188,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.9296145707533644" green="0.98836809396743774" blue="0.54415052511417872" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqZ-n0-1TB">
-                                <rect key="frame" x="128" y="546" width="119" height="30"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -199,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVy-qu-U9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155.5" y="1112.5"/>
+            <point key="canvasLocation" x="1769.5" y="1091.5"/>
         </scene>
         <!--Meaningful Controller-->
         <scene sceneID="THL-gG-fJq">
@@ -235,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7e-Ae-czM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.5" y="1074.5"/>
+            <point key="canvasLocation" x="473.5" y="2050.5"/>
         </scene>
         <!--Blue Controller-->
         <scene sceneID="dKS-gI-Asm">
@@ -269,7 +270,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stm-mt-Kx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047.5" y="1091.5"/>
+            <point key="canvasLocation" x="915.5" y="2067.5"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="YGP-K9-de7">
+            <objects>
+                <viewController id="BnU-4J-DEH" userLabel="Welcome" customClass="LocalMovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FQW-cX-qKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="JgE-2w-BLE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OJp-Xm-776">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVe-Jh-3YJ" userLabel="Movie Playback Area">
+                                <rect key="frame" x="0.0" y="64" width="376" height="376"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="judy-welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-7q-ePL">
+                                        <rect key="frame" x="8" y="36" width="360" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92961457079999998" green="0.98836809400000003" blue="0.54415052509999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="movieNameLabel" destination="2b7-7q-ePL" id="SX4-C0-fxD"/>
+                        <outlet property="playbackView" destination="aVe-Jh-3YJ" id="85a-yS-fzh"/>
+                        <segue destination="s0d-al-Di4" kind="custom" identifier="Next" customClass="IntroSegue" id="rQu-21-Pto"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pj-tM-ZEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.5" y="1091.5"/>
         </scene>
     </scenes>
 </document>

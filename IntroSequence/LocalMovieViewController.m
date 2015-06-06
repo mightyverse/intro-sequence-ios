@@ -44,7 +44,7 @@ CGFloat kMovieViewOffsetY = 0.0;
     if (bundle)
     {
         NSString *movieName = movieNameLabel.text;
-        
+        NSLog(movieName);
         NSString *moviePath = [bundle pathForResource:movieName                                               ofType:@"mp4"];
         if (moviePath)
         {
@@ -292,7 +292,7 @@ CGFloat kMovieViewOffsetY = 0.0;
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
-    [[self.moviePlayerController view] removeFromSuperview];
+   // [[self.moviePlayerController view] removeFromSuperview];
 }
 
 
