@@ -59,6 +59,9 @@ CGFloat kMovieViewOffsetY = 0.0;
         /* Save the movie object. */
         self.moviePlayerController = player;
         
+        player.controlStyle = MPMovieControlStyleNone;
+
+        
         /* Register the current object as an observer for the movie
          notifications. */
        // [self installMovieNotificationObservers];
