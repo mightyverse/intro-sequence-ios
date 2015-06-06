@@ -28,12 +28,13 @@ CGFloat kMovieViewOffsetY = 0.0;
 @property MPMoviePlayerController *moviePlayerController;
 
 @property (weak, nonatomic) IBOutlet UIView *playbackView;
+@property (weak, nonatomic) IBOutlet UILabel *movieNameLabel;
 
 @end
 
 @implementation LocalMovieViewController
 @synthesize moviePlayerController;
-
+@synthesize movieNameLabel;
 
 /* Returns a URL to a local movie in the app bundle. */
 -(NSURL *)localMovieURL
@@ -42,8 +43,9 @@ CGFloat kMovieViewOffsetY = 0.0;
     NSBundle *bundle = [NSBundle mainBundle];
     if (bundle)
     {
-        NSString *moviePath = [bundle pathForResource:@"judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome"
-                                               ofType:@"mp4"];
+        NSString *movieName = movieNameLabel.text;
+        
+        NSString *moviePath = [bundle pathForResource:movieName                                               ofType:@"mp4"];
         if (moviePath)
         {
             theMovieURL = [NSURL fileURLWithPath:moviePath];
@@ -267,7 +269,8 @@ CGFloat kMovieViewOffsetY = 0.0;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"viewDidLoad LocalMovieViewController");
-    
+    movieNameLabel.hidden = YES;
+
     [self.playbackView setBackgroundColor:[UIColor clearColor]];
     [self.playbackView setOpaque:NO];
 

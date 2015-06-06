@@ -171,7 +171,15 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-jm-wxw" userLabel="Movie Playback Area">
                                 <rect key="frame" x="0.0" y="64" width="376" height="376"/>
-                                <color key="backgroundColor" red="0.19304764620000001" green="0.40428740029999999" blue="0.096317772369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="judy-welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-V1-lVU">
+                                        <rect key="frame" x="8" y="36" width="360" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9296145707533644" green="0.98836809396743774" blue="0.54415052511417872" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqZ-n0-1TB">
                                 <rect key="frame" x="128" y="546" width="119" height="30"/>
@@ -184,6 +192,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="movieNameLabel" destination="QrK-V1-lVU" id="WTQ-Pv-2yq"/>
                         <outlet property="playbackView" destination="cRB-jm-wxw" id="lHs-lw-IFi"/>
                         <segue destination="OKW-Ma-qYh" kind="show" identifier="Next" id="m1I-Tj-kro"/>
                     </connections>

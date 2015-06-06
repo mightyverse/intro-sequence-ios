@@ -17,6 +17,7 @@
 		2699782B1B2313E300D3A11E /* LocalMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699782A1B2313E300D3A11E /* LocalMovieViewController.m */; };
 		2699782E1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */; };
 		269978321B231CB200D3A11E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269978311B231CB200D3A11E /* MediaPlayer.framework */; };
+		269978341B23438800D3A11E /* judy-welcome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 269978331B23438800D3A11E /* judy-welcome.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		2699782A1B2313E300D3A11E /* LocalMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMovieViewController.m; sourceTree = "<group>"; };
 		2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; path = "Movies/judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; sourceTree = SOURCE_ROOT; };
 		269978311B231CB200D3A11E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		269978331B23438800D3A11E /* judy-welcome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "judy-welcome.mp4"; path = "Movies/judy-welcome.mp4"; sourceTree = SOURCE_ROOT; };
+		269978351B2343A300D3A11E /* john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4"; path = "Movies/john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 		2699782C1B23177B00D3A11E /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				269978351B2343A300D3A11E /* john-c-fox-3517c5bf-b949-43ae-9a7f-0fba1e6b6094-native-language.mp4 */,
+				269978331B23438800D3A11E /* judy-welcome.mp4 */,
 				2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */,
 			);
 			name = Movies;
@@ -231,6 +236,7 @@
 				2699780C1B2286B400D3A11E /* Main.storyboard in Resources */,
 				269978111B2286B400D3A11E /* LaunchScreen.xib in Resources */,
 				2699780E1B2286B400D3A11E /* Images.xcassets in Resources */,
+				269978341B23438800D3A11E /* judy-welcome.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
