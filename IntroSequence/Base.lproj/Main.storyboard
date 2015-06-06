@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="654.5" y="1102.5"/>
         </scene>
-        <!--Green Controller-->
+        <!--LocalMovie Controller-->
         <scene sceneID="XNf-Nj-7KQ">
             <objects>
-                <viewController id="s0d-al-Di4" userLabel="Green Controller" sceneMemberID="viewController">
+                <viewController id="s0d-al-Di4" userLabel="LocalMovie Controller" customClass="LocalMovieViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQI-q8-m98"/>
                         <viewControllerLayoutGuide type="bottom" id="zNn-nm-rHd"/>

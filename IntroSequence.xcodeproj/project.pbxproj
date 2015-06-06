@@ -14,6 +14,8 @@
 		269978111B2286B400D3A11E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2699780F1B2286B400D3A11E /* LaunchScreen.xib */; };
 		2699781D1B2286B400D3A11E /* IntroSequenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699781C1B2286B400D3A11E /* IntroSequenceTests.m */; };
 		269978281B228CDF00D3A11E /* EndIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269978271B228CDF00D3A11E /* EndIntroViewController.m */; };
+		2699782B1B2313E300D3A11E /* LocalMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699782A1B2313E300D3A11E /* LocalMovieViewController.m */; };
+		2699782E1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		2699781C1B2286B400D3A11E /* IntroSequenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroSequenceTests.m; sourceTree = "<group>"; };
 		269978261B228CDF00D3A11E /* EndIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndIntroViewController.h; sourceTree = "<group>"; };
 		269978271B228CDF00D3A11E /* EndIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndIntroViewController.m; sourceTree = "<group>"; };
+		269978291B2313E300D3A11E /* LocalMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMovieViewController.h; sourceTree = "<group>"; };
+		2699782A1B2313E300D3A11E /* LocalMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMovieViewController.m; sourceTree = "<group>"; };
+		2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; path = "Movies/judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,8 @@
 				269978041B2286B400D3A11E /* AppDelegate.h */,
 				269978051B2286B400D3A11E /* AppDelegate.m */,
 				2699780A1B2286B400D3A11E /* Main.storyboard */,
+				269978291B2313E300D3A11E /* LocalMovieViewController.h */,
+				2699782A1B2313E300D3A11E /* LocalMovieViewController.m */,
 				269978261B228CDF00D3A11E /* EndIntroViewController.h */,
 				269978271B228CDF00D3A11E /* EndIntroViewController.m */,
 				2699780D1B2286B400D3A11E /* Images.xcassets */,
@@ -96,6 +103,7 @@
 		269978001B2286B400D3A11E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2699782C1B23177B00D3A11E /* Movies */,
 				269978011B2286B400D3A11E /* Info.plist */,
 				269978021B2286B400D3A11E /* main.m */,
 			);
@@ -117,6 +125,14 @@
 				2699781B1B2286B400D3A11E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2699782C1B23177B00D3A11E /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				2699782D1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 */,
+			);
+			name = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2699782E1B23178C00D3A11E /* judy-tuan-89e52b2c-0940-4fc1-e538-5b014b1f05ee-you-are-awesome.mp4 in Resources */,
 				2699780C1B2286B400D3A11E /* Main.storyboard in Resources */,
 				269978111B2286B400D3A11E /* LaunchScreen.xib in Resources */,
 				2699780E1B2286B400D3A11E /* Images.xcassets in Resources */,
@@ -222,6 +239,7 @@
 				269978281B228CDF00D3A11E /* EndIntroViewController.m in Sources */,
 				269978061B2286B400D3A11E /* AppDelegate.m in Sources */,
 				269978031B2286B400D3A11E /* main.m in Sources */,
+				2699782B1B2313E300D3A11E /* LocalMovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
