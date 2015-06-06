@@ -169,10 +169,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-jm-wxw">
-                                <rect key="frame" x="63" y="57" width="260" height="225"/>
-                                <color key="backgroundColor" red="0.19304764620000001" green="0.40428740029999999" blue="0.096317772369999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqZ-n0-1TB">
                                 <rect key="frame" x="128" y="390" width="119" height="30"/>
                                 <state key="normal" title="Next">
@@ -183,7 +179,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-Zw-88u">
-                                <rect key="frame" x="156" y="319" width="75" height="30"/>
+                                <rect key="frame" x="156" y="341" width="75" height="30"/>
                                 <state key="normal" title="Play Movie">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -191,10 +187,17 @@
                                     <action selector="tapPlayMovie:" destination="s0d-al-Di4" eventType="touchUpInside" id="Tjp-Ma-ttn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-jm-wxw">
+                                <rect key="frame" x="63" y="64" width="260" height="260"/>
+                                <color key="backgroundColor" red="0.19304764620000001" green="0.40428740029999999" blue="0.096317772369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playbackView" destination="cRB-jm-wxw" id="lHs-lw-IFi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVy-qu-U9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

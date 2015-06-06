@@ -8,8 +8,8 @@
 
 #import "LocalMovieViewController.h"
 
-CGFloat kMovieViewOffsetX = 20.0;
-CGFloat kMovieViewOffsetY = 20.0;
+CGFloat kMovieViewOffsetX = 0.0;
+CGFloat kMovieViewOffsetY = 0.0;
 
 @interface LocalMovieViewController ()
 -(NSURL *)localMovieURL;
@@ -17,6 +17,8 @@ CGFloat kMovieViewOffsetY = 20.0;
 -(void)createAndConfigurePlayerWithURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType;
 
 @property MPMoviePlayerController *moviePlayerController;
+
+@property (weak, nonatomic) IBOutlet UIView *playbackView;
 
 @end
 
@@ -75,7 +77,7 @@ CGFloat kMovieViewOffsetY = 20.0;
          underneath during movie playback. */
      //   [self.view addSubview:self.backgroundView];
      
-        CGRect viewInsetRect = CGRectInset ([self.view bounds],
+        CGRect viewInsetRect = CGRectInset ([self.playbackView frame],
                                             kMovieViewOffsetX,
                                             kMovieViewOffsetY );
 
