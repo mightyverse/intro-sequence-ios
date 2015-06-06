@@ -117,16 +117,9 @@ CGFloat kMovieViewOffsetY = 0.0;
     // Do any additional setup after loading the view.
     NSLog(@"viewDidLoad LocalMovieViewController");
     NSURL *movieUrl = [self localMovieURL];
-    NSLog([ movieUrl absoluteString]);
-
-}
-
-- (IBAction)tapPlayMovie:(id)sender {
-    NSURL *movieUrl = [self localMovieURL];
-
     [self playMovieFile:movieUrl];
-}
 
+}
 
 
 - (void)didReceiveMemoryWarning {
