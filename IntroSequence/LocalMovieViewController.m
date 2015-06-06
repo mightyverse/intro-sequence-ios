@@ -151,6 +151,13 @@ CGFloat kMovieViewOffsetY = 0.0;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"viewDidLoad LocalMovieViewController");
+    
+    [self.playbackView setBackgroundColor:[UIColor clearColor]];
+    [self.playbackView setOpaque:NO];
+
+}
+
+- (void) viewDidAppear:(BOOL) animated {
     NSURL *movieUrl = [self localMovieURL];
     [self playMovieFile:movieUrl];
 }

@@ -169,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-jm-wxw">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-jm-wxw" userLabel="Movie Playback Area">
                                 <rect key="frame" x="0.0" y="64" width="376" height="376"/>
                                 <color key="backgroundColor" red="0.19304764620000001" green="0.40428740029999999" blue="0.096317772369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
