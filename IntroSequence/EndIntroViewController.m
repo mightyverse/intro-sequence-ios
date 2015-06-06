@@ -27,7 +27,9 @@
 - (IBAction)goToAppAction:(id)sender {
     NSLog(@"goToAppAction");
     
-    
+    UIViewController *appViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"my app"];
+    NSAssert(appViewController, @"unexpected appViewController not defined");
+    self.navigationController.viewControllers = [NSArray arrayWithObject:appViewController];
 }
 
 /*
