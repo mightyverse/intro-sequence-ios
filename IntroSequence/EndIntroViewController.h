@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EndIntroViewController.h
 //  IntroSequence
 //
 //  Created by Sarah Allen on 6/5/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface EndIntroViewController : UIViewController
 
 @end
-
