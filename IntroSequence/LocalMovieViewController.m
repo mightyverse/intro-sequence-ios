@@ -16,6 +16,15 @@ CGFloat kMovieViewOffsetY = 0.0;
 -(void)createAndPlayMovieForURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType;
 -(void)createAndConfigurePlayerWithURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType;
 
+// notifications
+-(void)moviePlayBackDidFinish:(NSNotification*)notification;
+-(void)loadStateDidChange:(NSNotification *)notification;
+-(void)moviePlayBackStateDidChange:(NSNotification*)notification;
+-(void)mediaIsPreparedToPlayDidChange:(NSNotification*)notification;
+
+-(void)installMovieNotificationObservers;
+-(void)removeMovieNotificationHandlers;
+
 @property MPMoviePlayerController *moviePlayerController;
 
 @property (weak, nonatomic) IBOutlet UIView *playbackView;
@@ -42,6 +51,8 @@ CGFloat kMovieViewOffsetY = 0.0;
     }
     return theMovieURL;
 }
+
+#pragma mark Notification Handlers
 
 /*  Notification called when the movie finished playing. */
 - (void) moviePlayBackDidFinish:(NSNotification*)notification
@@ -70,7 +81,115 @@ CGFloat kMovieViewOffsetY = 0.0;
     [self performSegueWithIdentifier: @"Next" sender: self];
 }
 
+/* Handle movie load state changes. */
+- (void)loadStateDidChange:(NSNotification *)notification
+{
+    MPMoviePlayerController *player = notification.object;
+    MPMovieLoadState loadState = player.loadState;
 
+    /* The load state is not known at this time. */
+    if (loadState & MPMovieLoadStateUnknown)
+    {
+        NSLog(@"loadStateDidChange: unknown");
+    }
+
+    /* The buffer has enough data that playback can begin, but it
+     may run out of data before playback finishes. */
+    if (loadState & MPMovieLoadStatePlayable)
+    {
+        NSLog(@"loadStateDidChange: playable");
+    }
+
+    /* Enough data has been buffered for playback to continue uninterrupted. */
+    if (loadState & MPMovieLoadStatePlaythroughOK)
+    {
+        NSLog(@"loadStateDidChange: playthrough ok");
+
+    }
+
+    /* The buffering of data has stalled. */
+    if (loadState & MPMovieLoadStateStalled)
+    {
+        NSLog(@"loadStateDidChange: stalled");
+    }
+
+    if(moviePlayerController.loadState & (MPMovieLoadStatePlayable | MPMovieLoadStatePlaythroughOK)) {
+        [self.view addSubview: [player view]];
+        [player play];
+    }
+}
+
+/* Called when the movie playback state has changed. */
+- (void) moviePlayBackStateDidChange:(NSNotification*)notification
+{
+    MPMoviePlayerController *player = notification.object;
+
+    /* Playback is currently stopped. */
+    if (player.playbackState == MPMoviePlaybackStateStopped)
+    {
+        NSLog(@"moviePlayBackStateDidChange: stopped");
+    }
+    /*  Playback is currently under way. */
+    else if (player.playbackState == MPMoviePlaybackStatePlaying)
+    {
+        NSLog(@"moviePlayBackStateDidChange: playing");
+    }
+    /* Playback is currently paused. */
+    else if (player.playbackState == MPMoviePlaybackStatePaused)
+    {
+        NSLog(@"moviePlayBackStateDidChange: paused");
+    }
+    /* Playback is temporarily interrupted, perhaps because the buffer
+     ran out of content. */
+    else if (player.playbackState == MPMoviePlaybackStateInterrupted)
+    {
+        NSLog(@"moviePlayBackStateDidChange: interrupted");
+    }
+}
+
+/* Notifies observers of a change in the prepared-to-play state of an object
+ conforming to the MPMediaPlayback protocol. */
+- (void) mediaIsPreparedToPlayDidChange:(NSNotification*)notification
+{
+    NSLog(@"mediaIsPreparedToPlayDidChange");
+}
+
+/* Register observers for the various movie object notifications. */
+-(void)installMovieNotificationObservers
+{
+    MPMoviePlayerController *player = [self moviePlayerController];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loadStateDidChange:)
+                                                 name:MPMoviePlayerLoadStateDidChangeNotification
+                                               object:player];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:player];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(mediaIsPreparedToPlayDidChange:)
+                                                 name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification
+                                               object:player];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackStateDidChange:)
+                                                 name:MPMoviePlayerPlaybackStateDidChangeNotification
+                                               object:player];
+}
+
+/* Remove the movie notification observers from the movie object. */
+-(void)removeMovieNotificationHandlers
+{
+    MPMoviePlayerController *player = [self moviePlayerController];
+
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerLoadStateDidChangeNotification object:player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification object:player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackStateDidChangeNotification object:player];
+}
 
 /*
  Create a MPMoviePlayerController movie object for the specified URL and add movie notification
@@ -93,7 +212,7 @@ CGFloat kMovieViewOffsetY = 0.0;
         
         /* Register the current object as an observer for the movie
          notifications. */
-       // [self installMovieNotificationObservers];
+       [self installMovieNotificationObservers];
         
         /* Specify the URL that points to the movie file. */
        [player setContentURL:[self localMovieURL]];
@@ -121,13 +240,12 @@ CGFloat kMovieViewOffsetY = 0.0;
         /* To present a movie in your application, incorporate the view contained
          in a movie player’s view property into your application’s view hierarchy.
          Be sure to size the frame correctly. */
-        [self.view addSubview: [player view]];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(moviePlayBackDidFinish:)
-                                                     name:MPMoviePlayerPlaybackDidFinishNotification
-                                                   object:player];
+        player.shouldAutoplay = YES;
 
+        [moviePlayerController prepareToPlay];
+
+        
     }
 }
 
@@ -136,8 +254,6 @@ CGFloat kMovieViewOffsetY = 0.0;
 {
     [self createAndConfigurePlayerWithURL:movieURL sourceType:sourceType];
     
-    /* Play the movie! */
-    [[self moviePlayerController] play];
 }
 
 /* Play the local movie */
@@ -157,9 +273,23 @@ CGFloat kMovieViewOffsetY = 0.0;
 
 }
 
+- (void)viewDidUnload
+{
+    [self removeMovieNotificationHandlers];
+    [self setMoviePlayerController:nil];
+
+    [super viewDidUnload];
+}
+
+
+
 - (void) viewDidAppear:(BOOL) animated {
     NSURL *movieUrl = [self localMovieURL];
     [self playMovieFile:movieUrl];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [[self.moviePlayerController view] removeFromSuperview];
 }
 
 
